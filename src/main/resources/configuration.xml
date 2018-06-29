@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="application.properties"></properties>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--如果上面没有指定数据库配置的properties文件，那么此处可以这样直接配置 -->
+                <property name="driver" value="${spring.datasource.driver-class-name}"/>
+                <property name="url" value="${spring.datasource.url}"/>
+                <property name="username" value="${spring.datasource.username}"/>
+                <property name="password" value="${spring.datasource.password}"/>
+
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="userdao.xml"/>
+        <!--<mapper class="com.springboot.swgger.IUserMapper"/>-->
+    </mappers>
+</configuration>

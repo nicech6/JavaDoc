@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.swgger.mybatis.UserDao">
+    <select id="findAllUser" resultType="com.springboot.swgger.UserInfo">
+        SELECT * FROM user
+    </select>
+
+    <select id="findById" resultType="com.springboot.swgger.UserInfo">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <insert id="insertUser" parameterType="com.springboot.swgger.UserInfo">
+        INSERT INTO `user` (id,name,money) VALUES(#{id},#{name},#{money})
+    </insert>
+
+    <delete id="delete" parameterType="com.springboot.swgger.UserInfo">
+        DELETE FROM user WHERE `id`=#{id}
+    </delete>
+
+    <update id="updateName" parameterType="com.springboot.swgger.UserInfo">
+        UPDATE user SET  `name`=#{name} WHERE  `id`=#{id}
+    </update>
+
+    <select id="mulitSelector" parameterType="com.springboot.swgger.UserInfo"
+            resultType="com.springboot.swgger.UserInfo">
+        SELECT * FROM USER
+        <where>
+            <if test="money!=0">
+                AND money>#{money}
+            </if>
+            <if test="name!=null">
+                AND name LIKE '%' #{name} '%'
+            </if>
+
+        </where>
+    </select>
+</mapper>
+
