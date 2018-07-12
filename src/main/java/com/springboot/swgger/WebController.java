@@ -7,6 +7,7 @@ import com.springboot.swgger.mybatis.UserService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import redis.clients.jedis.Jedis;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -183,4 +184,16 @@ public class WebController {
 //        result.setData();
 //        return result;
 //    }
+
+    @RequestMapping(value = "/redis/{key}", method = RequestMethod.GET)
+    @ApiOperation(value = "redis数据库", httpMethod = "GET", tags = "redis")
+    public BaseResult redis(@PathVariable("key") String key) {
+        Jedis jedis = new Jedis("127.0.0.1", 6379);
+        String s = jedis.get(key);
+        BaseResult result = new BaseResult();
+        result.setMsg("suc");
+        result.setCode(200);
+        result.setData(s);
+        return result;
+    }
 }
