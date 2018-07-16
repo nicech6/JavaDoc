@@ -174,17 +174,9 @@ public class WebController {
         return result;
     }
 
-//    @RequestMapping(value = "/user/mybatis/muult/{money}/{name}", method = RequestMethod.GET)
-//    @ApiOperation(value = "mybatis多条件查询", httpMethod = "GET", tags = "user")
-//    public BaseResult muiltSele(@PathVariable("money") String money, @PathVariable("name") String name) {
-//        userService.muiltSele(money, name);
-//        BaseResult result = new BaseResult();
-//        result.setMsg("suc");
-//        result.setCode(200);
-//        result.setData();
-//        return result;
-//    }
-
+    /**
+     * 查询一条数据（redis字符串)
+     */
     @RequestMapping(value = "/redis/{key}", method = RequestMethod.GET)
     @ApiOperation(value = "redis数据库", httpMethod = "GET", tags = "redis")
     public BaseResult redis(@PathVariable("key") String key) {
