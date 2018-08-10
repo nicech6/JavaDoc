@@ -1,13 +1,11 @@
-package com.springboot.swgger.mybatis;
+package com.springboot.javadoc.mybatis;
 
-import com.springboot.swgger.UserInfo;
+import com.springboot.javadoc.UserInfo;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.test.context.jdbc.Sql;
 
 import java.io.IOException;
 import java.util.List;

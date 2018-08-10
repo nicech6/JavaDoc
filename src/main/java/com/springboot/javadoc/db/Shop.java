@@ -1,4 +1,4 @@
-package com.springboot.swgger.db;
+package com.springboot.javadoc.db;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

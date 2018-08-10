@@ -1,4 +1,4 @@
-package com.springboot.swgger;
+package com.springboot.javadoc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

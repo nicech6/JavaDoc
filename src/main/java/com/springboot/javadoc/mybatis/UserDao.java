@@ -1,10 +1,9 @@
-package com.springboot.swgger.mybatis;
+package com.springboot.javadoc.mybatis;
 
-import com.springboot.swgger.UserInfo;
+import com.springboot.javadoc.UserInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Repository

@@ -1,4 +1,4 @@
-package com.springboot.swgger;
+package com.springboot.javadoc;
 
 import org.apache.ibatis.annotations.Select;
 

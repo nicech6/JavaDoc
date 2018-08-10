@@ -1,4 +1,4 @@
-package com.springboot.swgger.base;
+package com.springboot.javadoc.base;
 
 public class BaseResult {
     private Object data;

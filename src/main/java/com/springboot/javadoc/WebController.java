@@ -1,9 +1,9 @@
-package com.springboot.swgger;
+package com.springboot.javadoc;
 
-import com.springboot.swgger.base.BaseResult;
-import com.springboot.swgger.db.Shop;
-import com.springboot.swgger.db.ShopRepository;
-import com.springboot.swgger.mybatis.UserService;
+import com.springboot.javadoc.base.BaseResult;
+import com.springboot.javadoc.db.Shop;
+import com.springboot.javadoc.db.ShopRepository;
+import com.springboot.javadoc.mybatis.UserService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

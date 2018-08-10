@@ -1,4 +1,4 @@
-package com.springboot.swgger;
+package com.springboot.javadoc;
 
 public class UserInfo {
     private int id;
