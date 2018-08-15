@@ -21,6 +21,6 @@
 
     <mappers>
         <mapper resource="userdao.xml"/>
-        <!--<mapper class="com.springboot.swgger.IUserMapper"/>-->
+        <!--<mapper class="com.springboot.javadocc.IUserMapper"/>-->
     </mappers>
 </configuration>
