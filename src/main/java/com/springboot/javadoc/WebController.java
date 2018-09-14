@@ -47,6 +47,7 @@ public class WebController {
         result.setData(map);
         result.setCode(200);
         result.setMsg("success");
+
         return result;
     }
 
